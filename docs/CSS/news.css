@@ -1,0 +1,438 @@
+/* ページ全体の背景色と中央に配置する白い枠 */
+body {
+    background-color: #027115;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* 背景画像スタイル */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* ヘッダーコンテナの調整 */
+.header-container {
+    position: relative;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* タイトル画像 */
+.title-section {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.title-image {
+    width: 350px;
+    height: auto;
+}
+
+/* ナビゲーションバー */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navbar li {
+    text-align: center;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #027115;
+}
+
+/* メインコンテンツ */
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+}
+/* .main-content h1 タイトルスタイル */
+.main-content h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* アイコンのスタイル（背景画像として指定） */
+.main-content h1::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-image: url('../image/icon/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+/* .main-content h1 の下に全幅アンダーライン */
+.main-content h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.main-content h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    margin: 0 20px;
+    position: relative;
+    padding-left: 10%;
+}
+
+
+
+/* h2 のアイコンスタイル */
+.main-content h2::before {
+    content: "";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../image/icon/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+/* h2 のアンダーライン */
+.main-content h2::after {
+    content: "";
+    display: block;
+    width: 80%; /* アンダーラインの幅*/
+    height: 2px;
+    background-color: #027115;
+    position: absolute;
+    bottom: 0;
+    left: 10%; /* アンダーラインを中央寄せ */
+}
+
+
+
+
+
+
+
+/* 本文エリアを白色で囲むスタイル */
+.main-content .content-box {
+    overflow: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+
+.youtube-container {
+    display: block;
+    max-width: 80%; /* 画像と同じ横幅 */
+    margin: 10px auto; /* 中央配置 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.youtube-container iframe {
+    width: 100%; /* コンテナに対して全幅 */
+    height: auto;
+    aspect-ratio: 16 / 9; /* 16:9のアスペクト比を維持 */
+}
+.image-caption {
+    font-size: 15px !important;
+    color: #929292 !important;
+    text-align: center !important;
+    margin-top: 5px !important;
+    line-height: 1.5 !important;
+}
+
+/* 本文テキストのスタイル */
+.main-content .content-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.main-content .content-box .highlighted-text {
+    font-size: 19px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    line-height: 1.8 !important;
+    text-align: justify !important;
+}
+
+
+
+.main-content .content-box img {
+    display: block;
+    margin: 10px auto; /* 上下の余白を10px、左右を自動 */
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.breadcrumb {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f0f0f0; /* 薄いグレーの背景色 */
+    border-radius: 5px; /* 角を丸める */
+    width: 100%; /* 幅を右端まで広げる */
+    box-sizing: border-box; 
+}
+
+.breadcrumb a {
+    color: #027115;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.year-switch-2024 {
+    display: flex;
+    gap: 8px;
+    margin: 40px 0 20px 0;
+    align-items: center;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: fit-content; 
+}
+
+.year-switch-2024 a {
+    color: #027115;
+    text-decoration: none;
+    font-size: 14px; /* フォントサイズ */
+    padding: 6px 10px;
+    border-right: 1px solid #ddd;
+}
+
+.year-switch-2024 a:last-child {
+    border-right: none;
+}
+
+.year-switch-2024 a:hover {
+    text-decoration: underline;
+}
+
+.year-switch-2024 a:first-child {
+    background-color: #027115; /* 緑色 */
+    color: white; /* 文字を白色 */
+    border-radius: 6px 0 0 6px; /* 左端を角丸 */
+}
+
+
+.year-switch-2023 {
+    display: flex;
+    gap: 8px;
+    margin: 40px 0 20px 0;
+    align-items: center;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: fit-content; 
+}
+
+.year-switch-2023 a {
+    color: #027115;
+    text-decoration: none;
+    font-size: 14px; /* フォントサイズ */
+    padding: 6px 10px;
+    border-right: 1px solid #ddd;
+}
+
+.year-switch-2023 a:last-child {
+    border-right: none;
+}
+
+.year-switch-2023 a:last-child {
+    background-color: #027115; /* 緑色 */
+    color: white; /* 文字を白色に */
+    border-right: none; /* 既存のスタイルを保持 */
+    border-radius: 0 6px 6px 0; /* 右端を角丸 */
+}
+
+.year-switch-2023 a:hover {
+    text-decoration: underline;
+}
+
+.year-switch-2023 a:hover {
+    text-decoration: underline;
+}
+
+
+/* フッター全体のスタイル */
+.footer {
+    background-color: #f8f8f8; /* フッターの背景 */
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #ff6868;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* 丸める */
+}
+
+/* フッターナビゲーションバー */
+.footer-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-navbar li {
+    display: inline-block;
+}
+
+.footer-navbar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-navbar a:hover {
+    color: #027115; /* ホバー時の文字色 */
+}
+
+/* SNSリンク全体 */
+.footer-sns {
+    text-align: center; /* 全体を中央揃え */
+    margin-top: 5px;
+}
+
+/* SNSリンクのタイトル */
+.sns-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 各SNSリンクボタンの共通スタイル */
+.sns-link {
+    display: inline-flex; /* 横並び */
+    align-items: center;
+    justify-content: center;
+    width: 280px; /* 横長長方形の幅 */
+    height: 50px; /* 横長長方形の高さ */
+    margin: 0px 7px 0 7px;
+    border-radius: 8px; /* 角を少し丸める */
+    text-decoration: none;
+    color: #fff; /* テキスト色 */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* YouTubeリンクのスタイル */
+.youtube-link {
+    background-color: #ff2929;
+}
+
+.youtube-link:hover {
+    background-color: #ff5f5f;
+}
+
+/* Xリンクのスタイル */
+.x-link {
+    background-color: #393939;
+}
+
+.x-link:hover {
+    background-color: #4f4f4f;
+}
+
+/* SNSアイコン */
+.sns-icon {
+    width: 32px; /* アイコンの幅 */
+    height: 32px; /* アイコンの高さ */
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+    border-radius: 3px; /* 角 */
+}
+
+/* SNSリンクテキスト */
+.sns-text {
+    font-size: 16px;
+}

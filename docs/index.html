@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サンプルのドキュメント</title>
+    <title>お祭り紹介サイト</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    見えるかな
+    <div class="page-wrapper">
+        <header>
+            <div class="header-container">
+                <!-- 背景動画 -->
+                <video class="background-video" autoplay loop muted playsinline>
+                    <source src="movie/header.mp4" type="video/mp4">
+                </video>
+        
+                <!-- タイトルとナビゲーションバー -->
+                <div class="title-section">
+                    <img src="image/icon/logo.png" alt="大久保町住吉神社と大久保町西講中のタイトル" class="title-image">
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="history.html">西講中の歴史</a></li>
+                        <li><a href="danziri.html">布団太鼓の紹介</a></li>
+                        <li><a href="autumn.html">秋祭り</a></li>
+                        <li><a href="spring.html">春祭り</a></li>
+                        <li><a href="album_2024.html">アルバム</a></li>
+                        <li><a href="news_2024.html">最新情報</a></li>
+                        <li><a href="display.html">歴代布団太鼓</a></li>
+                        <li><a href="trafic.html">交通アクセス</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+
+        <main class="content">
+            <!-- 左側のナビゲーションバー -->
+            <aside class="side-navbar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home" class="no-hover"><img src="image/icon/icon.png" alt="icon"> 西講中について</a>
+                            <p class="nav-description">大久保町は旧西国街道沿いに開けた町で昔は宿場町として栄え、今も旧本陣跡が残っている歴史ある町です。
+                            その大久保町の鎮守、住吉神社の祭りは春と秋の年2回行われており100年以上歴史がある祭りです<br>
+                            春祭りは5月の第3日曜日とその前日、秋祭りは10月の第3日曜日とその前日に行われ、宵宮と本宮の2日間にわたって開催されます。<br>
+                            祭りは氏子の集まりである西と東の住吉講がそれぞれ布団太鼓やだんじり、
+                            獅子舞等を有し、宮入・奉納をしています。<br>
+                            私たちは西住吉講、略称は西講中で、地元では「にしんじょ」と呼んでいます。<br>
+                            ここでは、西講中の祭りについて紹介していきます。<br>
+                            </p>
+                        </li>
+                        <li><a href="history.html"><img src="image/icon/icon.png" alt="icon"> 西講中の歴史</a></li>
+                        <li><a href="danziri.html"><img src="image/icon/icon.png" alt="icon"> 布団太鼓の紹介</a></li>
+                        <li><a href="autumn.html"><img src="image/icon/icon.png" alt="icon"> 秋祭り</a></li>
+                        <li><a href="spring.html"><img src="image/icon/icon.png" alt="icon"> 春祭り</a></li>
+                        <li><a href="album_2024.html"><img src="image/icon/icon.png" alt="icon"> アルバム</a></li>
+                        <li><a href="news_2024.html"><img src="image/icon/icon.png" alt="icon"> 最新情報</a></li>
+                        <li><a href="display.html"><img src="image/icon/icon.png" alt="icon"> 歴代布団太鼓</a></li>
+                        <li><a href="trafic.html"><img src="image/icon/icon.png" alt="icon"> 交通アクセス</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- メインコンテンツ -->
+            <section class="main-content">
+                <h1><img src="image/icon/new_icon.png" alt="icon">最新情報</h1>
+                <ul class="news-list">
+                    <li><a href="news_2024.html">2024年10月27日 令和6年 大久保町 住吉神社 秋祭り 昼宮の動画をYouTubeにアップしました</a></li>
+                    <li><a href="news_2024.html">2024年10月23日 令和6年 大久保町 住吉神社 秋祭り 宵宮の動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年10月20日 令和6年 大久保町 住吉神社 秋季例大祭は無事に終了しました。</a></li>
+                    <li><a href="news_2024.html">2024年10月12日 平成27年 大久保町 住吉神社 平成27年 秋祭り 宵宮・昼宮の動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年09月30日 平成23～26年 大久保町 住吉神社 秋祭り 宵宮・昼宮の動画を計5種類YouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年06月09日 平成22年 大久保町 住吉神社 秋祭り 宵宮・昼宮の動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年06月09日 平成21年 大久保町 住吉神社 秋祭り 宵宮・昼宮の動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年05月26日 「獅子舞とふれいあい祭り」の動画を2種類YouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年05月26日 「ふるさと民俗芸能発表会」の動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年05月25日 令和6年 大久保町 住吉神社 春祭りの動画をYouTubeにアップしました。</a></li>
+                    <li><a href="news_2024.html">2024年05月19日 令和6年 大久保町 住吉神社 春季例大祭は無事に終了しました。</a></li>
+                    <li><a href="news_2023.html">2023年10月28日 「令和元年 あかし伝統夢まつり」の動画をYouTubeにアップしました。</a></li>
+                </ul>
+            </section>
+
+            <!-- 右側のYouTube動画セクション -->
+            <aside class="youtube-section">
+                <h2><img src="image/icon/youtube.png" alt="YouTube icon" class="youtube-icon"> 最新の秋祭り動画</h2>
+                <div class="youtube-frame">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/POQUfWqqrcs" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h2><img src="image/icon/youtube.png" alt="YouTube icon" class="youtube-icon"> 最新の春祭り動画</h2>
+                <div class="youtube-frame">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GMteHBBi6UA" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!-- Xの投稿部分 -->
+                <h2>最新のXの投稿</h2>
+                <div class="x-posts">
+                    <a class="twitter-timeline" href="https://twitter.com/kobedenshi?ref_src=twsrc%5Etfw">Tweets by ユーザー名</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </aside>
+        </main>
+        <footer class="footer">
+            <div class="footer-navbar">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="history.html">西講中の歴史</a></li>
+                    <li><a href="danziri.html">布団太鼓の紹介</a></li>
+                    <li><a href="autumn.html">秋祭り</a></li>
+                    <li><a href="spring.html">春祭り</a></li>
+                    <li><a href="album_2024.html">アルバム</a></li>
+                    <li><a href="news_2024.html">最新情報</a></li>
+                    <li><a href="display.html">歴代布団太鼓</a></li>
+                    <li><a href="trafic.html">交通アクセス</a></li>
+                </ul>
+            </div>
+            <div class="footer-sns">
+                <p class="sns-title">SNSリンク</p>
+                <a href="https://www.youtube.com/@Matsuri_-xz6yl" target="_blank" class="sns-link youtube-link">
+                    <img src="image/icon/Youtube_icon.png" alt="Youtubeアイコン" class="sns-icon">
+                    <span class="sns-text youtube-text">【西講中】YouTube</span>
+                </a>
+                <a href="https://x.com/kobedenshi?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Akobedenshi%7Ctwcon%5Es1_c1" target="_blank" class="sns-link x-link">
+                    <img src="image/icon/X_icon.png" alt="Xアイコン" class="sns-icon">
+                    <span class="sns-text">【西講中】Xアカウント</span>
+                </a>
+            </div>
+        </footer>
+        
+        
+        
+        
+        
+    </div>
 </body>
 </html>

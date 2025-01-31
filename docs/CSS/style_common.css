@@ -1,0 +1,697 @@
+/* 既存のCSSコード */
+
+/* ページ全体の背景色と中央に配置する白い枠 */ 
+body {
+    background-color: #027115;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* 背景画像スタイル */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+/* ヘッダーコンテナの調整 */
+.header-container {
+    position: relative;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* タイトル画像 */
+.title-section {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.title-image {
+    width: 350px;
+    height: auto;
+}
+
+/* ナビゲーションバー */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.navbar li {
+    text-align: center;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #027115;
+}
+
+/* メインコンテンツ */
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* .main-content h1 タイトルスタイル */
+.main-content h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* アイコンのスタイル（背景画像として指定） */
+.main-content h1::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-image: url('../image/icon/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+/* .main-content h1 の下に全幅アンダーライン */
+.main-content h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* h2 タイトルスタイル */
+.main-content h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5px;
+    margin-left: 30px; /* h1 より右寄りに配置 */
+}
+
+/* h2 のアイコンスタイル */
+.main-content h2::before {
+    content: "";
+    display: inline-block;
+    width: 36px; /*小さめのアイコン */
+    height: 36px;
+    background-image: url('../image/icon/icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+/* h2 のアンダーライン */
+.main-content h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* アンダーライン */
+    background-color: #027115;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+/* 本文のスタイル */
+.main-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    padding: 0 90px;
+}
+
+/* 画像のスタイル */
+.festival-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.festival-image img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* mizuhiki 画像スタイルと間隔調整 */
+.mizuhiki-image {
+    margin-bottom: 20px;
+}
+
+.mizuhiki-image img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mizuhiki2-image {
+    margin-top: 20px;
+}
+
+.mizuhiki2-image img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    font-size: 15px !important;
+    color: #929292 !important;
+    text-align: center !important;
+    margin-top: 5px !important;
+    line-height: 1.5 !important;
+}
+
+.festival-image.pair {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 説明文と画像を縦揃え */
+    gap: 20px; /* 画像間の隙間 */
+    margin: 20px auto; /* 中央揃え */
+    max-width: 1200px; /* 全体の最大幅*/
+}
+
+.festival-image.pair div {
+    text-align: center; /* 説明文を中央揃え */
+    max-width: 450px;
+}
+
+.festival-image.pair img {
+    width: 100%;
+    height: auto; /* アスペクト比を維持 */
+    max-width: 450px; /* 画像の最大幅を設定 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* シャドウ効果 */
+}
+
+.festival-image.pair .image-caption {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mizuhiki-image.pair {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 説明文と画像を縦揃え */
+    gap: 10px; /* 画像間の隙間 */
+    margin: 20px auto; /* 中央揃え */
+    max-width: 1200px; /* 全体の最大幅*/
+}
+
+.mizuhiki-image.pair div {
+    text-align: center; /* 説明文を中央揃え */
+    max-width: 530px;
+}
+
+.mizuhiki-image.pair img {
+    width: 100%;
+    height: auto; /* アスペクト比を維持 */
+    max-width: 530px; /* 画像の最大 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* シャドウ効果 */
+}
+
+.mizuhiki-image.pair .image-caption {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* news-listの歴史スタイル */
+.news-list {
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.news-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #027115;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.news-list .year {
+    font-weight: bold;
+    font-size: 18px;
+    color: #027115;
+    margin-right: 15px;
+}
+
+.news-list .event {
+    color: #333;
+    font-size: 16px;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 0 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.details img {
+    max-width: 70%;
+    height: auto;
+    display: block; /* ブロック要素にして中央寄せを可能に */
+    margin: 10px auto; /* 上下に少しの余白を追加し、中央揃え */
+}
+
+.mizuhiki-pair {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 写真の間隔を調整 */
+    max-width: 70%; /* rewa_celebration.jpgの幅に合わせる */
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%; /* 各画像がコンテナの幅にフィット */
+    max-width: 300px; /* 必要に応じて最大幅を設定 */
+    height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-caption {
+    font-size: 15px!important;
+    color: #929292!important;
+    margin-top: 5px!important;
+    line-height: 1.5!important;
+    white-space: nowrap!important; /* 改行を防止 */
+}
+
+/* yane.jpg のサイズを調整 */
+img[src="image/yane.jpg"] {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ツールチップ用スタイル */
+.news-list li {
+    position: relative; /* ツールチップの位置*/
+}
+
+
+
+/* 初期状態のツールチップ表示 */
+.news-list li.initial-tooltip::after {
+    content: "クリックして詳細を表示";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 16px);
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.5s ease; /* フェードアウト*/
+}
+
+.news-list li.initial-tooltip::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 4.5px);
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* フェードアウト*/
+}
+
+/* フェードアウト時 */
+.news-list li.fade-out::after,
+.news-list li.fade-out::before {
+    opacity: 0;
+}
+
+/* 通常ホバー時のツールチップ表示 */
+.news-list li.show-tooltip:hover::after {
+    content: "クリックして詳細を表示";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 16px); 
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.news-list li.show-tooltip:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 4.5px);
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+}
+
+
+
+/* 詳細が表示されるときはツールチップを非表示 */
+.news-list li:not(.show-tooltip)::after,
+.news-list li:not(.show-tooltip)::before {
+    content: none;
+}
+
+
+
+.details-label {
+    margin-left: auto;
+    color: #027115;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.breadcrumb {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f0f0f0; /* 薄いグレーの背景 */
+    border-radius: 5px; /* 角を丸める */
+    width: 100%; /* 幅を右端まで広げる */
+    box-sizing: border-box;
+}
+
+.breadcrumb a {
+    color: #027115;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+/* タイトルのスタイル */
+.access-title {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'Noto Serif JP', serif;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* タイトル横にアイコン画像*/
+.access-title::before {
+    content: url('path/to/icon.png'); /* アイコン画像のパス */
+    margin-right: 10px;
+}
+
+/* マップ全体のコンテナのスタイル */
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* iframeのスタイル */
+.map-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* マップ全体のコンテナのスタイル */
+.mymap-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* iframeのスタイル */
+.mymap-container iframe {
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+/* アクセスセクション全体のスタイル */
+.access-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; /* 中央寄せ */
+    max-width: 100%; /* セクション全体の最大幅 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* アクセスボックスのスタイル */
+.access-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex: 1;
+    max-width: 450px; /* 各ボックスの最大幅 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e8f5e9
+}
+
+
+
+/* 各アクセス方法のタイトル */
+.access-box h3 {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* アイコンのスタイル */
+.icon {
+    width: 20px;
+    height: 25px;
+}
+.icon2 {
+    width: 24px;
+    height: 32px;
+}
+
+
+.youtube-container {
+    max-width: 70%; 
+    margin: 20px auto 0 auto; 
+}
+
+.youtube-container iframe {
+    width: 100%; 
+    height: auto;
+    aspect-ratio: 16 / 9; /* 16:9のアスペクト比を */
+}
+
+
+/* フッター全体のスタイル */
+.footer {
+    background-color: #f8f8f8; /* フッターの背景 */
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #ff6868;
+    text-align: center;
+    border-radius: 0 0 10px 10px; /* 丸める */
+}
+
+/* フッターナビゲーションバー */
+.footer-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-navbar li {
+    display: inline-block;
+}
+
+.footer-navbar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-navbar a:hover {
+    color: #027115; /* ホバー時の文字色 */
+}
+
+/* SNSリンク全体 */
+.footer-sns {
+    text-align: center; /* 全体を中央揃え */
+    margin-top: 5px;
+}
+
+/* SNSリンクのタイトル */
+.sns-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* 各SNSリンクボタンの共通スタイル */
+.sns-link {
+    display: inline-flex; /* 横並び */
+    align-items: center;
+    justify-content: center;
+    width: 280px; /* 横長長方形の幅 */
+    height: 50px; /* 横長長方形の高さ */
+    margin: 0px 7px 0 7px;
+    border-radius: 8px; /* 角を少し丸める */
+    text-decoration: none;
+    color: #fff; /* テキスト色 */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* YouTubeリンクのスタイル */
+.youtube-link {
+    background-color: #ff2929;
+}
+
+.youtube-link:hover {
+    background-color: #ff5f5f;
+}
+
+/* Xリンクのスタイル */
+.x-link {
+    background-color: #393939;
+}
+
+.x-link:hover {
+    background-color: #4f4f4f;
+}
+
+/* SNSアイコン */
+.sns-icon {
+    width: 32px; /* アイコンの幅 */
+    height: 32px; /* アイコンの高さ */
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+    border-radius: 3px; /* 角 */
+}
+
+/* SNSリンクテキスト */
+.sns-text {
+    font-size: 16px;
+}
